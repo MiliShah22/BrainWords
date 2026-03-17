@@ -28,6 +28,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`${nunito.variable} ${fredoka.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
